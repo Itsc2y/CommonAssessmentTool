@@ -1,9 +1,14 @@
+"""
+This module defines the FastAPI application instance and configures its middleware, 
+including CORS and router setup. The application serves as the entry point for the API.
+"""
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.clients.router import router as clients_router
 
-
+# Create FastAPI application instance
 app = FastAPI()
 
 # Set API endpoints on router
