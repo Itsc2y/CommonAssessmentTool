@@ -11,10 +11,10 @@ from fastapi import APIRouter, HTTPException
 from app.clients.schema import Client, ClientUpdate
 from app.database import clients_collection
 
-router = APIRouter(prefix="/clients", tags=["clients"])
+router = APIRouter(prefix="", tags=["clients"])
 
 
-@router.post("/create", response_model=Client, summary="Create a new client")
+@router.post("/clients/create", response_model=Client, summary="Create a new client")
 async def create_client(client_data: Client):
     """
     Create a new client in the database.
